@@ -1,0 +1,202 @@
+/* RESET & DASAR */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, sans-serif;
+}
+
+body {
+  background-color: #f5f7fa;
+  color: #333;
+  padding: 20px;
+}
+
+/* HEADER */
+header {
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+header h1 {
+  color: #2c3e50;
+  font-size: 28px;
+  margin-bottom: 5px;
+}
+
+header p {
+  color: #555;
+  font-size: 15px;
+}
+
+/* FORM TRANSAKSI */
+form {
+  background: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  max-width: 700px;
+  margin: 0 auto 30px;
+}
+
+form h2 {
+  margin-bottom: 15px;
+  color: #1e88e5;
+  text-align: center;
+}
+
+label {
+  display: block;
+  margin: 10px 0 5px;
+  font-weight: 600;
+}
+
+input, select {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  outline: none;
+  transition: 0.2s;
+}
+
+input:focus, select:focus {
+  border-color: #1e88e5;
+}
+
+button {
+  background-color: #1e88e5;
+  color: white;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+button:hover {
+  background-color: #1565c0;
+}
+
+/* FILTER & LAPORAN */
+#filterSection {
+  max-width: 700px;
+  margin: 0 auto 25px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#filterSection input {
+  width: 50%;
+  padding: 6px;
+}
+
+#laporanGabungan {
+  background-color: #2e7d32;
+}
+
+#laporanGabungan:hover {
+  background-color: #1b5e20;
+}
+
+/* TABEL DATA */
+.table-container {
+  max-width: 900px;
+  margin: 0 auto;
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+th, td {
+  padding: 10px 15px;
+  text-align: left;
+  border-bottom: 1px solid #eee;
+}
+
+th {
+  background-color: #1e88e5;
+  color: white;
+  font-weight: bold;
+}
+
+td button {
+  margin-right: 5px;
+  padding: 5px 10px;
+  font-size: 13px;
+}
+
+td button:nth-child(1) {
+  background-color: #ffb300;
+}
+
+td button:nth-child(1):hover {
+  background-color: #f57c00;
+}
+
+td button:nth-child(2) {
+  background-color: #e53935;
+}
+
+td button:nth-child(2):hover {
+  background-color: #b71c1c;
+}
+
+/* LAPORAN BULANAN */
+#laporanBulanan {
+  max-width: 900px;
+  margin: 40px auto;
+  background: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+#laporanBulanan h2 {
+  text-align: center;
+  color: #1e88e5;
+  margin-bottom: 20px;
+}
+
+#laporanBulanan table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 15px;
+}
+
+#laporanBulanan th, #laporanBulanan td {
+  border: 1px solid #ddd;
+  padding: 8px 12px;
+  text-align: left;
+}
+
+#laporanBulanan th {
+  background-color: #1e88e5;
+  color: white;
+}
+
+/* CETAK PDF */
+@media print {
+  body {
+    background: white;
+  }
+  form, #filterSection, button, .table-container button {
+    display: none !important;
+  }
+  table {
+    box-shadow: none;
+    border: 1px solid #000;
+  }
+  th, td {
+    border: 1px solid #000;
+    color: #000;
+  }
+}

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sistem Akuntansi Sekolah MTs & MA</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>Sistem Akuntansi Sekolah</h1>
+    <p>MTs & MA Terpadu - Bendahara Sekolah</p>
+  </header>
+
+  <!-- ========== FORM TRANSAKSI ========== -->
+  <form id="formTransaksi">
+    <h2>Input Transaksi</h2>
+
+    <label for="tanggal">Tanggal Transaksi</label>
+    <input type="date" id="tanggal" required>
+
+    <label for="kategori">Kategori</label>
+    <select id="kategori" required>
+      <option value="">-- Pilih Kategori --</option>
+      <option value="SPP">SPP</option>
+      <option value="Honorer Guru">Honorer Guru</option>
+      <option value="Pembayaran Ijazah">Pembayaran Ijazah</option>
+      <option value="ATK/Perlengkapan">ATK/Perlengkapan</option>
+      <option value="Pembayaran Lain-lain">Pembayaran Lain-lain</option>
+    </select>
+
+    <label for="keterangan">Keterangan</label>
+    <input type="text" id="keterangan" placeholder="Contoh: Pembayaran SPP April">
+
+    <label for="jumlah">Jumlah (Rp)</label>
+    <input type="number" id="jumlah" placeholder="Masukkan nominal" required>
+
+    <button type="submit">Simpan Transaksi</button>
+  </form>
+
+  <!-- ========== FILTER & LAPORAN ========== -->
+  <div id="filterSection">
+    <input type="date" id="filterTanggal" placeholder="Filter tanggal...">
+    <button id="laporanGabungan">Laporan Gabungan</button>
+  </div>
+
+  <!-- ========== TABEL DATA TRANSAKSI ========== -->
+  <div class="table-container">
+    <table id="tabelData">
+      <thead>
+        <tr>
+          <th>Tanggal</th>
+          <th>Kategori</th>
+          <th>Keterangan</th>
+          <th>Jumlah</th>
+          <th>Aksi</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+  </div>
+
+  <!-- ========== LAPORAN BULANAN ========== -->
+  <section id="laporanBulanan">
+    <h2>Laporan Keuangan Bulanan</h2>
+    <canvas id="chartBulan" width="400" height="200"></canvas>
+    <div id="tabelBulan"></div>
+  </section>
+
+  <!-- Chart.js -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+  <!-- Script utama -->
+  <script src="script.js"></script>
+</body>
+</html>
